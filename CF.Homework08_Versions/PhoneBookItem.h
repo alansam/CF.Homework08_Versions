@@ -132,6 +132,7 @@ std::ostream & operator <<(std::ostream & oss, PhoneBookItem const & thing) {
   oss << "  nome: " << thing.nome() << '\n';
   oss << "  telefono di casa: " << thing.telefono_casa() << '\n';
   oss << "  numero di cellulare: " << thing.cellulare() << '\n';
+  oss << "  indirizzo di casa: " << thing.indirizzo_casa() << '\n';
   oss << "  indirizzo email: " << thing.indirizzo_mail() << '\n';
 
   return oss;
