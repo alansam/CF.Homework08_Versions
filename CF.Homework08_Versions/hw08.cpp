@@ -34,10 +34,8 @@
 #include "PhoneBookItem.h"
 
 //  MARK: - Constants
-//#define SIZE 2
 size_t constexpr SIZE { 2 };
 
-//using namespace std;
 using namespace std::literals::string_literals;
 
 //#define LOTS_OF_VECTORS
@@ -117,7 +115,6 @@ int main() {
 }
 
 #ifdef LOTS_OF_VECTORS
-  //g=tc m=c a=ic
 /*
  *  MARK: riempimento()
  */
@@ -180,10 +177,6 @@ void bsort(std::vector<std::string> & nome,
     //ciclo esterno che serve a vedere i giorni,mese e anno sono stati ordinati fino a quel momento
     for (size_t j_ = 0; j_ < taglia - 1 - i_; j_++) {
       //ciclo interno che serve a confrontare ogni numero con il successivo e fa andare avanti i più grandi verso la fine e i più piccoli all'inizio
-      /*
-       *  doesn't conform to spec.
-      if ((indirizzo_casa[j_] == indirizzo_casa[j_ + 1] && cognome[j_] == cellulare[j_ + 1] && telefono_casa[j_] < telefono_casa[j_ + 1]) || (indirizzo_casa[j_] == indirizzo_casa[j_ + 1] && cognome[j_] < cognome[j_ + 1]) || (indirizzo_casa[j_] < indirizzo_casa[j_ + 1])) {
-       */
       if (nome[j_] > nome[j_ + 1] ||
           (nome[j_] == nome[j_ + 1] && cognome[j_] > cognome[j_ + 1])) {
         //confronto tra anni,mesi e giorni. Se l'anno e il mese sono gli stessi controlla il giorno,se l'anno è lo stesso, controlla il mese o l'anno
@@ -197,7 +190,6 @@ void bsort(std::vector<std::string> & nome,
     }
   }
 }
-  //g=tc m=c a=ic
 
 #else
 
