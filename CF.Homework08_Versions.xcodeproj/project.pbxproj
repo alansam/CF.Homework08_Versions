@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5A1504D626F6D56900527C9F /* CF.Homework08_Versions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CF.Homework08_Versions; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1504D926F6D56900527C9F /* hw08.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hw08.cpp; sourceTree = "<group>"; };
+		5A1504E026F6DD5300527C9F /* PhoneBookItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneBookItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1504D926F6D56900527C9F /* hw08.cpp */,
+				5A1504E026F6DD5300527C9F /* PhoneBookItem.h */,
 			);
 			path = CF.Homework08_Versions;
 			sourceTree = "<group>";
