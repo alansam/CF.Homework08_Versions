@@ -281,6 +281,7 @@ void visualizza(std::vector<std::string> nome,
     std::cout << "Inserisci il " << i_ + 1 << "^ nome: " << nome[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ telefono di casa: " << telefono_casa[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ numero di cellulare: " << cellulare[i_] << '\n';
+    std::cout << "Inserisci il " << i_ + 1 << "^ indirizzo casa: " << indirizzo_casa[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ indirizzo email: " << indirizzo_mail[i_] << '\n';
     std::cout << std::endl;
   }
@@ -300,13 +301,19 @@ void bsort(std::vector<std::string> nome,
     //ciclo esterno che serve a vedere i giorni,mese e anno sono stati ordinati fino a quel momento
     for (size_t j_ = 0; j_ < taglia - 1 - i_; j_++) {
       //ciclo interno che serve a confrontare ogni numero con il successivo e fa andare avanti i più grandi verso la fine e i più piccoli all'inizio
+      /*
+       *  doesn't conform to spec.
       if ((indirizzo_casa[j_] == indirizzo_casa[j_ + 1] && cognome[j_] == cellulare[j_ + 1] && telefono_casa[j_] < telefono_casa[j_ + 1]) || (indirizzo_casa[j_] == indirizzo_casa[j_ + 1] && cognome[j_] < cognome[j_ + 1]) || (indirizzo_casa[j_] < indirizzo_casa[j_ + 1])) {
+       */
+      if (nome[j_] > nome[j_ + 1] ||
+          (nome[j_] == nome[j_ + 1] && cognome[j_] > cognome[j_ + 1])) {
         //confronto tra anni,mesi e giorni. Se l'anno e il mese sono gli stessi controlla il giorno,se l'anno è lo stesso, controlla il mese o l'anno
         std::swap(cognome[j_ + 1], cognome[j_]);   //scambio
         std::swap(nome[j_ + 1], nome[j_]);   //scambio
         std::swap(telefono_casa[j_ + 1], telefono_casa[j_]); //scambio
-        std::swap(cognome[j_ + 1], cellulare[j_]);  //scambio
+        std::swap(cellulare[j_ + 1], cellulare[j_]);  //scambio
         std::swap(indirizzo_casa[j_ + 1], indirizzo_casa[j_]); //scambio
+        std::swap(indirizzo_mail[j_ + 1], indirizzo_mail[j_]); //scambio
       }
     }
   }
