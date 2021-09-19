@@ -160,6 +160,7 @@ void visualizza(std::vector<std::string> & nome,
     std::cout << "Inserisci il " << i_ + 1 << "^ nome: " << nome[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ telefono di casa: " << telefono_casa[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ numero di cellulare: " << cellulare[i_] << '\n';
+    std::cout << "Inserisci il " << i_ + 1 << "^ indirizzo casa: " << indirizzo_casa[i_] << '\n';
     std::cout << "Inserisci il " << i_ + 1 << "^ indirizzo email: " << indirizzo_mail[i_] << '\n';
     std::cout << std::endl;
   }
@@ -189,8 +190,9 @@ void bsort(std::vector<std::string> & nome,
         std::swap(cognome[j_ + 1], cognome[j_]);   //scambio
         std::swap(nome[j_ + 1], nome[j_]);   //scambio
         std::swap(telefono_casa[j_ + 1], telefono_casa[j_]); //scambio
-        std::swap(cognome[j_ + 1], cellulare[j_]);  //scambio
+        std::swap(cellulare[j_ + 1], cellulare[j_]);  //scambio
         std::swap(indirizzo_casa[j_ + 1], indirizzo_casa[j_]); //scambio
+        std::swap(indirizzo_mail[j_ + 1], indirizzo_mail[j_]); //scambio
       }
     }
   }
